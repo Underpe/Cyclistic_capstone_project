@@ -52,9 +52,34 @@ All the steps taken during the data processing part on Rstudio can be found on t
 ## Data Analysis
 For this part of the project, both Rstudio and Tableau tools have been used. The whole desription of the steps taken during this part on Rstudio can be found on this [link]
 
-One of the first things observed during the initial analysis taken when calculating the mean, median, maximun and minimun ride lengths for casual and member rider, is that member users do have fewer ride lengths comparing with casual users.
-Observing the following **Plot N.1** 
+One of the first things observed during the initial analysis taken when calculating the mean, median, maximun and minimun ride lengths for casual and member rider, is that member users do have fewer ride lengths comparing with casual users. 
+Observing the following **Plot No.1** it can easily see how casual users do rides almost with double length duration comparing with member users. The variation of the ride legths, is more homogeneous within the week on member users than on casual user, where this last ones have the peak lengths on weekend days.
+
+Checking the amount of rides for both user types on week days represented in **Plot No.2**, it can be observed how beside member users have more rides during the week, these ones are surpased by casual users on weekend days, 
+
+**Plot No.1**
+
 ![Bicycles rides by average ride length and weekday](https://user-images.githubusercontent.com/99078887/152646478-003c7698-7c8f-41eb-a850-98ac0aacf119.jpeg)
 
+**Plot No.2**
+
+![Bicycles rides by rides amount and weekday](https://user-images.githubusercontent.com/99078887/152647128-b75fcc07-fcae-424e-b8fe-d434bcf25c2b.jpeg)
+
+These differences could indicate a different purpose of each type of user when taking a ride. Casual users seem to be more active on weekend days, both by ride amounts and riding lengths. Whereas member users are more homogeneous on their usage behaviur along the week.
+
+If performing the same analysis on the monthly rides, similar trends are observed. The length of the rides of member users are more even during the whole year, while casual users ones have longer rides in time, mostly withing the first halft of the year **(Plots No.3 & No.4)**
+
+**Plot No.3**
+
+![Bicycles rides by rides length and month (2)](https://user-images.githubusercontent.com/99078887/152648863-2d527dc9-153e-41fc-b522-021d1cbee432.jpeg)
+
+**Plot No.4**
+
+![Bicycles rides by rides lengh and month WRAP (2)](https://user-images.githubusercontent.com/99078887/152648883-c9947ce3-d2fd-4d9d-98c3-bd041b720945.jpeg)
+
+
+When observing the rides amount by month, for both type of users the hightes amount of rides happens on warm months. For member users, the amount of rides are quite uniform from June to October, whereas for casual riders, the amount of rides are at it's highest on July and August. **(Plots No.5 to No.9)**
+
+July and August are manily holiday season months, and could happend the same as with weekend days, where casual riders use the bike-sharing service the most. On the other hand, member users have a more uniform usage of the service during the week days and also during the warm months. This behaviur for mmeber users could show their purpose is something happening more constantly, not affected by big changes, like the tranportation to the work or studing places. For casual rides, their usage behaviur could be more related with leiruse time or holidays. 
 
 
