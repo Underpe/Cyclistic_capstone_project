@@ -47,6 +47,6 @@ Two new columns have been created to represent the day of the week and the month
 
 Once the previous part was done, I moved to Rstudio to keep with the data processing. The corresponding libraries were loaded in order to set up the working environment.
 
-All the steps taken during the data processing part on Rstudio can be found on this [link]
+All the steps taken during the data processing part on Rstudio can be found on this [link](Data_Process)
 
 
