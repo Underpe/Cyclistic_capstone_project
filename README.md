@@ -40,8 +40,9 @@ For each month there is a .cvs file with the information of all rides performed 
 ## Data process
 For this part of the project, the tools that were used are Microsoft Excel and Rstudio.
 
-Firstly, each .csv file has been observed on Excel. Any possible duplicate row has been checked. The correct data formatting off all the variables have been ensured. 
-A new column has been created to add the duration of each ride in minutes, called ride_length_mins. This new variable shows some negative values, having the ride ending time before the starting one. These values have been taken and errors, as no rides could have less than zero seconds, and have been removed.
+Firstly, each .csv file has been observed on Excel, and any possible duplicate row has been checked. The correct data formatting off all the variables have been ensured.
+
+A new column has been created to add the duration of each ride in minutes, called "ride_length_mins". This new variable shows some negative values, having the ride ending time before the starting one. These values have been taken as errors, as no rides could have less than zero seconds; those cases have been removed.
 Two new columns have been created to represent the day of the week and the month where each ride took place, called “weekday” and “month” respectively.
 
 Once the previous part was done, I moved to Rstudio to keep with the data processing. The corresponding libraries were loaded in order to set up the working environment.
