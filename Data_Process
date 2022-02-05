@@ -1,0 +1,53 @@
+#Loading packages:
+library(tidyverse)
+library(readr)
+library(lubridate)
+library(dplyr)
+library(tidyr)
+library(skimr)
+library(ggplot2)
+
+# Set up the working directory:
+setwd("/Users/ander/Documents/Data Analytics/Google Data Analysis/Course 8/Capstone_Cyclistic/Dataset")
+
+
+# Import .csv files from 12 months data
+January_2021 <- read.csv("202101-divvy-tripdata.csv")
+February_2021 <- read.csv("202102-divvy-tripdata.csv")
+March_2021 <- read.csv("202103-divvy-tripdata.csv")
+April_2021 <- read.csv("202104-divvy-tripdata.csv")
+May_2021 <- read.csv("202105-divvy-tripdata.csv")
+June_2021 <- read.csv("202106-divvy-tripdata.csv")
+July_2021 <- read.csv("202107-divvy-tripdata.csv")
+August_2021 <- read.csv("202108-divvy-tripdata.csv")
+September_2021 <- read.csv("202109-divvy-tripdata.csv")
+October_2021 <- read.csv("202110-divvy-tripdata.csv")
+November_2021 <- read.csv("202111-divvy-tripdata.csv")
+December_2021 <- read.csv("202112-divvy-tripdata.csv")
+
+# Combine all 2021 months data into one single data frame
+tripdata_2021 <- bind_rows(X202101_divvy_tripdata,X202102_divvy_tripdata,X202103_divvy_tripdata,X202104_divvy_tripdata,X202105_divvy_tripdata,X202106_divvy_tripdata,X202107_divvy_tripdata,X202108_divvy_tripdata,X202109_divvy_tripdata,X202110_divvy_tripdata,X202111_divvy_tripdata,X202112_divvy_tripdata)
+
+
+# Check the column names and structure of the data frames for any inconsistency 
+colnames(tripdata_2021)
+str(tripdata_2021)
+summary(tripdata_2021)
+head(tripdata_2021)
+
+# Change ride length into numeric type for better usability on the analysis processes 
+tripdata_2021$ride_length_min <- as.numeric(as.double(tripdata_2021$ride_length_min))
+
+# change ride length from seconds to minutes
+tripdata_2021_v2 %>% mutate(ride_length_min = ride_length/60)
+
+# removed error rides with duration less than 1mins.
+tripdata_2021_v2 <- tripdata_2021 %>% filter(ride_length_min > 0)
+
+# create a column with ride_length in minutes for better analysis
+
+#Check for TEST rides
+nrow(tripdata_2021_v2[tripdata_2021_v2$start_station_name == "TEST", ])
+
+#Export cleaned "tripdata_2021_v2" dataframe to a new .csv file
+write_csv(tripdata_2021_v2, "tripdata_2021_v2.csv")
