@@ -90,6 +90,18 @@ July and August are manily holiday season months, and could happend the same as 
 
 ![Bicycles rides by rides amount and month WRAP (2)](https://user-images.githubusercontent.com/99078887/152673904-1367c9bf-0f72-4814-b0e6-ce5907255d2a.jpeg)
 
+Some differences could also be found on the type of bicycles that users use (**Plot No.7**). Member users tend to use more classic_bike type, while for casual users, the use of classic and electric type of bike is more even. At the same time, member users seems not to use docked_bike type; it could be retaled with the purpose of using the bikes for the transportation to work or studing places, as it could not be that convenient.
+
+**Plot No.7**
+
+![Bicycles rides by rideables ride amount  WRAP](https://user-images.githubusercontent.com/99078887/152687850-6362c09e-56a8-4809-8d3d-d79c9d9f9fdc.jpeg)
+
+
+The final analysis has been performed with Tableau, to visualize the geographical location of each riding starting point for each type of user. With the cordinates of latitude and longitude provided in the data, the visualization of **Plot No.8** has been created. The amount of rides on each station are represented by the size of the circunference. It can be oberved how casual riders are more located on the coastal area of the city, mainly on the Loop and Near north areas, that belong to the city venter and touristic places of the city; whereas member users, cover a wider range of the city, that are not that localized on the central areas.
+
+**PlotNo.8**
+
+![Dashboard 1](https://user-images.githubusercontent.com/99078887/152687860-36f1c605-a662-44d6-a23b-87514ff4824d.png)
 
 
 
