@@ -1,0 +1,152 @@
+# Analysis of the ride lenght data (minimun, maximiun, mean and median)
+summary(tripdata_2021_v2$ride_length_mins)
+
+# comparing users and members ride lenght data (minimum, maximum, mean and median)
+aggregate(tripdata_2021_v2$ride_length_mins ~ tripdata_2021_v2$member_casual, FUN = median)
+aggregate(tripdata_2021_v2$ride_length_mins ~ tripdata_2021_v2$member_casual, FUN = mean)
+aggregate(tripdata_2021_v2$ride_length_mins ~ tripdata_2021_v2$member_casual, FUN = max)
+aggregate(tripdata_2021_v2$ride_length_mins ~ tripdata_2021_v2$member_casual, FUN = min)
+#median
+1                         casual                          16.01667
+2                         member                           9.55000
+#mean
+1                         casual                          27.35914
+2                         member                          13.37202
+#max
+1                         casual                          1439.950
+2                         member                          1439.950
+#min
+1                         casual                        0.01666667
+2                         member                        0.01666667
+
+# The average ride length by user type and weekday 
+aggregate(tripdata_2021_v2$ride_length_mins ~ tripdata_2021_v2$member_casual + tripdata_2021_v2$weekday, FUN = mean)
+1                          casual                   Friday                          24.98856
+2                          member                   Friday                          13.00499
+3                          casual                   Monday                          28.10784
+4                          member                   Monday                          13.06987
+5                          casual                 Saturday                          29.87133
+6                          member                 Saturday                          14.99624
+8                          casual                   Sunday                          32.00141
+9                          member                   Sunday                          15.33119
+10                         casual                 Thursday                          23.01334
+11                         member                 Thursday                          12.48981
+12                         casual                  Tuesday                          24.22972
+13                         member                  Tuesday                          12.43096
+14                         casual                Wednesday                          23.20559
+15                         member                Wednesday                          12.59120
+
+#Order the week days from Monday to Sunday
+tripdata_2021_v2$weekday <- ordered(tripdata_2021_v2$weekday, levels=c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"))
+1                          casual                   Monday                          28.10784
+2                          member                   Monday                          13.06987
+3                          casual                  Tuesday                          24.22972
+4                          member                  Tuesday                          12.43096
+5                          casual                Wednesday                          23.20559
+6                          member                Wednesday                          12.59120
+7                          casual                 Thursday                          23.01334
+8                          member                 Thursday                          12.48981
+9                          casual                   Friday                          24.98856
+10                         member                   Friday                          13.00499
+11                         casual                 Saturday                          29.87133
+12                         member                 Saturday                          14.99624
+14                         casual                   Sunday                          32.00141
+15                         member                   Sunday                          15.33119
+
+
+# Visualize the average length of rides per weekday and user type
+tripdata_2021_v2 %>% 
+  mutate(weekday = wday(started_at, label = TRUE)) %>% 
+  group_by(member_casual, weekday) %>% 
+  summarise(rides_amount = n()
+            ,mean_ride_length = mean(ride_length_mins)) %>% 
+  arrange(member_casual, weekday)  %>% 
+  ggplot(aes(x = weekday, y = mean_ride_length, fill = member_casual)) +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(title = "Bicycles rides", subtitle = "Average ride length", x = "Day of week", y = "Average ride length in minutes", fill = 'User type')+
+  geom_col(position = "dodge")
+
+# Visualize the amount or rides per weekday and user type
+tripdata_2021_v2 %>% 
+  mutate(weekday = wday(started_at, label = TRUE)) %>% 
+  group_by(member_casual, weekday) %>% 
+  summarise(rides_amount = n()) %>% 
+  arrange(member_casual, weekday)  %>% 
+  ggplot(aes(x = weekday, y = rides_amount, fill = member_casual)) +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(title = "Bicycles rides", subtitle = "Rides amount", x = "Day of week", y = "Rides amount", fill = 'User type')+
+  geom_col(position = "dodge")
+
+# Visualize the average length of rides per month and user type
+tripdata_2021_v2 %>% 
+  group_by(member_casual, month) %>% 
+  summarise(rides_amount = n()
+            ,mean_ride_length = mean(ride_length_mins)) %>% 
+  arrange(member_casual, month)  %>% 
+  ggplot(aes(x = month, y = mean_ride_length, fill = member_casual)) +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(title = "Bicycles rides", subtitle = "Average ride length", x = "Month", y = "Average ride length in minutes", fill = 'User type')+
+  geom_col(position = "dodge")
+
+# Visualize the average length of rides per month and user type on a wrapped plot
+tripdata_2021_v2 %>% 
+  group_by(member_casual, month) %>% 
+  summarise(rides_amount = n()
+            ,mean_ride_length = mean(ride_length_mins)) %>% 
+  arrange(member_casual, month)  %>% 
+  ggplot(aes(x = month, y = mean_ride_length, fill = member_casual)) +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(title = "Bicycles rides", subtitle = "Average ride length", x = "Month", y = "Average ride length in minutes", fill = 'User type')+
+  geom_col(position = "dodge")+
+  facet_wrap(~member_casual)+
+  theme(axis.text.x = element_text(angle=70))
+
+#Visualize the average amount of rides per month and user type
+tripdata_2021_v2 %>% 
+  group_by(member_casual, month) %>% 
+  summarise(rides_amount = n()) %>% 
+  arrange(member_casual, month)  %>% 
+  ggplot(aes(x = month, y = rides_amount, fill = member_casual)) +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(title = "Bicycles rides", subtitle = "Rides amount per month", x = "Month", y = "Rides amount", fill = 'User type')+
+  geom_col(position = "dodge")
+  
+#Visualize the average amount of rides per month and user type on a wrapped plot
+tripdata_2021_v2 %>% 
+  group_by(member_casual, month) %>%
+  summarise(rides_amount = n()) %>% 
+  ggplot(aes(x = month, y = rides_amount, fill = member_casual)) +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(title = "Bicycles rides", subtitle = "Rides amount per month", x = "Month", y = "Rides amount", fill = 'User type')+
+  geom_col(position = "dodge")+
+  facet_wrap(~member_casual)+
+  theme(axis.text.x = element_text(angle=70))
+  
+#Visualize the rides amount by rideable type of bike on a wrapped plot
+tripdata_2021_v2 %>% 
+  group_by(member_casual, rideable_type) %>%
+  summarise(rides_amount = n()) %>% 
+  ggplot(aes(x = rideable_type, y = rides_amount, fill = member_casual)) +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(title = "Bicycles rides", subtitle = "Rides amount per rideable type", x = "Rideable type", y = "Rides amount", fill = 'User type')+
+  geom_col(position = "dodge")+
+  facet_wrap(~member_casual)
+  
+#Visualize the rides length by rideable type of bike on a wrapped plot
+tripdata_2021_v2 %>% 
+  group_by(member_casual, rideable_type) %>%
+  summarise(rides_amount = n(),
+            mean_ride_length = mean(ride_length_mins)) %>% 
+  ggplot(aes(x = rideable_type, y = mean_ride_length, fill = member_casual)) +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(title = "Bicycles rides", subtitle = "Rides length per rideable type", x = "Rideable type", y = "Rides length in minutes", fill = 'User type')+
+  geom_col(position = "dodge")+
+  facet_wrap(~member_casual)
