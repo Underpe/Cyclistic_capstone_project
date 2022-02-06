@@ -67,7 +67,7 @@ Checking the amount of rides for both user types on week days represented in **P
 
 These differences could indicate a different purpose of each type of user when taking a ride. Casual users seem to be more active on weekend days, both by ride amounts and riding lengths. Whereas member users are more homogeneous on their usage behaviur along the week.
 
-If performing the same analysis on the monthly rides, similar trends are observed. The length of the rides of member users are more even during the whole year, while casual users ones have longer rides in time, mostly withing the first halft of the year **(Plots No.3 & No.4)**
+If performing the same analysis on the monthly rides, similar trends are observed. The length of the rides of member users are more even during the whole year, while casual users ones have longer rides in time, mostly withing the first halft of the year **(Plots No.3 and No.4)**
 
 **Plot No.3**
 
@@ -78,8 +78,18 @@ If performing the same analysis on the monthly rides, similar trends are observe
 ![Bicycles rides by rides lengh and month WRAP (2)](https://user-images.githubusercontent.com/99078887/152648883-c9947ce3-d2fd-4d9d-98c3-bd041b720945.jpeg)
 
 
-When observing the rides amount by month, for both type of users the hightes amount of rides happens on warm months. For member users, the amount of rides are quite uniform from June to October, whereas for casual riders, the amount of rides are at it's highest on July and August. **(Plots No.5 to No.9)**
+When observing the rides amount by month, for both type of users the hightes amount of rides happens on warm months. For member users, the amount of rides are quite uniform from June to October, whereas for casual riders, the amount of rides are at it's highest on July and August. **(Plots No.5 and No.6)**
 
 July and August are manily holiday season months, and could happend the same as with weekend days, where casual riders use the bike-sharing service the most. On the other hand, member users have a more uniform usage of the service during the week days and also during the warm months. This behaviur for mmeber users could show their purpose is something happening more constantly, not affected by big changes, like the tranportation to the work or studing places. For casual rides, their usage behaviur could be more related with leiruse time or holidays. 
+
+**Plot No.5**
+
+![Bicycles rides by rides amount and month (2)](https://user-images.githubusercontent.com/99078887/152673874-1c781969-c1de-4c92-bb5b-267caaa66601.jpeg)
+
+**Plot No.6**
+
+![Bicycles rides by rides amount and month WRAP (2)](https://user-images.githubusercontent.com/99078887/152673904-1367c9bf-0f72-4814-b0e6-ce5907255d2a.jpeg)
+
+
 
 
