@@ -50,7 +50,7 @@ Once the previous part was done, I moved to Rstudio to keep with the data proces
 All the steps taken during the data processing part on Rstudio can be found on this [link](Data_Process)
 
 ## Data Analysis
-For this part of the project, both Rstudio and Tableau tools have been used. The whole desription of the steps taken during this part on Rstudio can be found on this [link]
+For this part of the project, both Rstudio and Tableau tools have been used. The whole desription of the steps taken during this part on Rstudio can be found on this [link](Data_Analysis)
 
 One of the first things observed during the initial analysis taken when calculating the mean, median, maximun and minimun ride lengths for casual and member rider, is that member users do have fewer ride lengths comparing with casual users. 
 Observing the following **Plot No.1** it can easily see how casual users do rides almost with double length duration comparing with member users. The variation of the ride legths, is more homogeneous within the week on member users than on casual user, where this last ones have the peak lengths on weekend days.
