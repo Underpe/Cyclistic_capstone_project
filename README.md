@@ -104,4 +104,9 @@ The final analysis has been performed with Tableau, to visualize the geographica
 ![Dashboard 1](https://user-images.githubusercontent.com/99078887/152687860-36f1c605-a662-44d6-a23b-87514ff4824d.png)
 
 
+##Summary
+Finally, after having performed the analysis, three main insights can be highlighted in the comparison between casual users and member users in the use of shared bicycles:
+
+1) Member user are more regurlar in their sharing bike service usage during the whole year, beside the cold winter months. At the same time, this customers are also very regular when using the bicycles during the week days. On the other hand, casual users' peak usage along the year happens in July and August.This last ones also happens to increase their service usage on weekends, bypassing member users' amount of rides on those days. From this results it could be understood that casual members use the service more for their leisure time and holidays, than member user; These last ones, instead, it seems their usage is more focus on transportation service to their work/educational places.
+2) Member users' starting stations are also more spread all over the city than the casual uses. These last ones are more localized on the coastal areas of the city center. This also could reinforce the idea that casual users make more use of the service for leisure and tourism, compared to member users. 
 
