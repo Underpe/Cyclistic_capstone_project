@@ -13,7 +13,7 @@ Cyclistic’s finance analysts have concluded that annual members are much more 
 Moreno has set a clear goal: Design marketing strategies aimed at converting casual riders into annual members. In order to do that, however, the marketing analyst team needs to better understand how annual members and casual riders differ, why casual riders would buy a membership, and how digital media could affect their marketing tactics. Moreno and her team are interested in analyzing the Cyclistic historical bike trip data to identify trends.
 
 ## Business Task
-The main task of this project is to analyze the historical data of the last twelve months to identify possible trends on the different behavior on casual and member riders in order to help guide the future marketing tactics.
+The main task of this project is to analyze the last twelve months of historical data, to identify possible trends on the different behavior of casual riders and anual member riders. The ultimate objective of this analysis would be to help guide the future marketing tactics.
 
 ## The Data
 Cyclistic’s historical trip data of the last twelve months (January to December of 2021) is provided by Motivate International Inc. to analyze and identify the different possible trends. Due to privacy reasons, this is public data does not show riders’ personally identifiable information such pass purchases to credit card numbers to determine if casual riders live in the Cyclistic service area or if they have purchased multiple single passes.  
@@ -50,12 +50,13 @@ Once the previous part was done, I moved to Rstudio to keep with the data proces
 All the steps taken during the data processing part on Rstudio can be found on this [link](Data_Process)
 
 ## Data Analysis
-For this part of the project, both Rstudio and Tableau tools have been used. The whole desription of the steps taken during this part on Rstudio can be found on this [link](Data_Analysis)
+For this part of the project, both Rstudio and Tableau tools have been used. The whole description of the steps taken during this part on Rstudio can be found on this [link](Data_Analysis)
 
-One of the first things observed during the initial analysis taken when calculating the mean, median, maximun and minimun ride lengths for casual and member rider, is that member users do have fewer ride lengths comparing with casual users. 
-Observing the following **Plot No.1** it can easily see how casual users do rides almost with double length duration comparing with member users. The variation of the ride legths, is more homogeneous within the week on member users than on casual user, where this last ones have the peak lengths on weekend days.
+One of the first things observed during the initial analysis taken when calculating the mean, median, maximum and minimum ride lengths for casual and member rider, is that member users do have fewer ride lengths comparing with casual users. 
+Observing the following **Plot No.1** it can easily see how casual users do rides almost with double length duration comparing with member users. The variation of the ride lengths, is more homogeneous within the week on member users than on casual user, where this last ones have the peak lengths on weekend days.
 
-Checking the amount of rides for both user types on week days represented in **Plot No.2**, it can be observed how beside member users have more rides during the week, these ones are surpased by casual users on weekend days, 
+Checking the amount of rides for both user types on week days represented in **Plot No.2**, it can be observed how beside member users have more rides during the week, these ones are surpassed by casual users on weekend days,
+
 
 **Plot No.1**
 
@@ -65,9 +66,9 @@ Checking the amount of rides for both user types on week days represented in **P
 
 ![Bicycles rides by rides amount and weekday](https://user-images.githubusercontent.com/99078887/152647128-b75fcc07-fcae-424e-b8fe-d434bcf25c2b.jpeg)
 
-These differences could indicate a different purpose of each type of user when taking a ride. Casual users seem to be more active on weekend days, both by ride amounts and riding lengths. Whereas member users are more homogeneous on their usage behaviur along the week.
+These differences could indicate a different purpose of each type of user when taking a ride. Casual users seem to be more active on weekend days, both by ride amounts and riding lengths. Whereas member users are more homogeneous on their usage behavior along the week.
 
-If performing the same analysis on the monthly rides, similar trends are observed. The length of the rides of member users are more even during the whole year, while casual users ones have longer rides in time, mostly withing the first halft of the year **(Plots No.3 and No.4)**
+If performing the same analysis on the monthly rides, similar trends are observed. The length of the rides of member users are more even during the whole year, while casual users ones have longer rides in time, mostly withing the first half of the year **(Plots No.3 and No.4)**
 
 **Plot No.3**
 
@@ -78,9 +79,10 @@ If performing the same analysis on the monthly rides, similar trends are observe
 ![Bicycles rides by rides lengh and month WRAP (2)](https://user-images.githubusercontent.com/99078887/152648883-c9947ce3-d2fd-4d9d-98c3-bd041b720945.jpeg)
 
 
-When observing the rides amount by month, for both type of users the hightes amount of rides happens on warm months. For member users, the amount of rides are quite uniform from June to October, whereas for casual riders, the amount of rides are at it's highest on July and August. **(Plots No.5 and No.6)**
+When observing the rides amount by month, for both type of users, the highest amount of rides happen on warm months. For member users, the number of rides is quite uniform from June to October, whereas for casual riders, the amount of rides are at its highest on July and August. **(Plots No.5 and No.6)**
 
-July and August are manily holiday season months, and could happend the same as with weekend days, where casual riders use the bike-sharing service the most. On the other hand, member users have a more uniform usage of the service during the week days and also during the warm months. This behaviur for mmeber users could show their purpose is something happening more constantly, not affected by big changes, like the tranportation to the work or studing places. For casual rides, their usage behaviur could be more related with leiruse time or holidays. 
+July and August are mainly holiday season months, and could happen the same as with weekend days, where casual riders use the bike-sharing service the most. On the other hand, member users have a more uniform usage of the service during the week days and also during the warm months. This behavior for member users could show their purpose is something happening more constantly, not affected by big changes, like the transportation to the work or studying places. For casual rides, their usage behavior could be more related with leisure time or holidays.
+
 
 **Plot No.5**
 
@@ -90,14 +92,14 @@ July and August are manily holiday season months, and could happend the same as 
 
 ![Bicycles rides by rides amount and month WRAP (2)](https://user-images.githubusercontent.com/99078887/152673904-1367c9bf-0f72-4814-b0e6-ce5907255d2a.jpeg)
 
-Some differences could also be found on the type of bicycles that users use (**Plot No.7**). Member users tend to use more classic_bike type, while for casual users, the use of classic and electric type of bike is more even. At the same time, member users seems not to use docked_bike type; it could be retaled with the purpose of using the bikes for the transportation to work or studing places, as it could not be that convenient.
+Some differences could also be found on the type of bicycles that users use (**Plot No.7**). Member users tend to use more classic_bike type, while for casual users, the use of classic and electric type of bike is more even. At the same time, member users seems not to use docked_bike type; it could be related with the purpose of using the bikes for the transportation to work or studying places, as it could not be that convenient.
 
 **Plot No.7**
 
 ![Bicycles rides by rideables ride amount  WRAP](https://user-images.githubusercontent.com/99078887/152687850-6362c09e-56a8-4809-8d3d-d79c9d9f9fdc.jpeg)
 
 
-The final analysis has been performed with Tableau, to visualize the geographical location of each riding starting point for each type of user. With the cordinates of latitude and longitude provided in the data, the visualization of **Plot No.8** has been created. The amount of rides on each station are represented by the size of the circunference. It can be oberved how casual riders are more located on the coastal area of the city, mainly on the Loop and Near north areas, that belong to the city venter and touristic places of the city; whereas member users, cover a wider range of the city, that are not that localized on the central areas.
+The final analysis has been performed with Tableau, to visualize the geographical location of each riding starting point for each type of user. With the cordinates of latitude and longitude provided in the data, the visualization of **Plot No.8** has been created. The amount of rides on each station are represented by the size of the circumference. It can be observed how casual riders are more located on the coastal area of the city, mainly on the Loop and Near north areas, that belong to the city venter and touristic places of the city; whereas member users, cover a wider range of the city, that are not that localized on the central areas.
 
 **Plot No.8**
 
@@ -108,10 +110,10 @@ The final analysis has been performed with Tableau, to visualize the geographica
 
 Finally, after having performed the analysis, three main insights can be highlighted in the comparison between casual users and member users in the use of shared bicycles:
 
-1) Member user are more regurlar in their sharing bike service usage during the whole year, beside the cold winter months. At the same time, this customers are also very regular when using the bicycles during the week days. On the other hand, casual users' peak usage along the year happens in July and August.This last ones also happens to increase their service usage on weekends, bypassing member users' amount of rides on those days. From this results it could be understood that casual members use the service more for their leisure time and holidays, than member user; These last ones, instead, it seems their usage is more focus on transportation service to their work/educational places.
+1) Member users are more regular in their sharing bike service usage during the whole year, beside the cold winter months. At the same time, these customers are also very regular when using the bicycles during the week days. On the other hand, casual users' peak usage along the year happens in July and August. This last one also happens to increase their service usage on weekends, bypassing member users' amount of rides on those days. From these results it could be understood that casual members use the service more for their leisure time and holidays, than member user; These last ones, instead, it seems their usage is more focus on transportation service to their work/educational places.
 2) Member users' starting stations are also more spread all over the city than the casual uses. These last ones are more localized on the coastal areas of the city center. This also could reinforce the idea that casual users make more use of the service for leisure and tourism, compared to member users. 
 
-Addittionally to the shared insights, I would like to propose some recomendations based on the analysis performed, in order to propose some actions to make casual users conveet into members:
+Additionally, based on the analysis performed, I would like to mention some recommendations in order to propose actions that could make casual users convert into members:
 
 1) A new type of subscription to attract casual users that is focused on the use of the bike service during the weekends, during the summer and holiday months, or a service limited to tourist and leisure areas.
 2) Launch a marketing campaign during the holiday and summer stages, in the most central and coastal areas of the city, where casual members use the service stations the most.
